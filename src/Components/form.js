@@ -4,9 +4,10 @@ function Form() {
     return (
       <div className="add-form">
        <form method="POST" className="form1">
-       <label>ADD NEW BOOK</label>
-         <input  type="text" placeholder="Book title" />
-         
+       <lebel>ADD NEW BOOK</lebel><br/>
+         <input  type="text" placeholder="Book title" /><br/>
+         <input  type="text" placeholder="Author" /><br/>
+         <button type="submit">Check status</button>
        </form>
       </div>
     );
