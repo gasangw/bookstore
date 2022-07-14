@@ -10,7 +10,7 @@ function Form() {
         <br />
         <input type="text" placeholder="Author" />
         <br />
-        <button type="submit">Check status</button>
+        <button type="submit">Add a Book</button>
       </form>
     </div>
   );

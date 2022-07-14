@@ -2,7 +2,12 @@
 
 ## Bookstore
 
-> Set up a React app using React documentation.
+> The Bookstore is a website similar to the "Awesome Books" . It that allows you to:
+
+- Display a list of books.
+- Add a book.
+- Remove a selected book.
+- By building this application, you will learn how to use React and Redux.
 
 
 ## Built With

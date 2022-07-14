@@ -1,8 +1,11 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
+import PropTypes from 'prop-types';
 import Form from './form';
 
 function Books({ books }) {
+  Books.propTypes = {
+    books: PropTypes.node.isRequired,
+  };
   return (
     <div className="book-list">
       {books.map((book) => (
