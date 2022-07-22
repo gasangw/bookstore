@@ -1,27 +1,45 @@
-const ADD_BOOK = 'books/ADD';
-const REMOVE_BOOK = 'books/REMOVE';
+import { v4 as uuidv4 } from 'uuid';
 
-const bookCounterReducer = (books = [], action) => {
-  switch (action.type) {
-    case ADD_BOOK:
-      return [...books, action.book];
+const ADD_BOOK = 'bookstore/books/addBook';
+const REMOVE_BOOK = 'bookstore/books/removeBook';
 
-    case REMOVE_BOOK:
-      return books.filter((book) => action.book !== book);
-    default:
-      return books;
-  }
+const initialState = {
+  books: [
+    { id: uuidv4(), title: 'Great Lakes', author: 'Gasangwa' },
+    { id: uuidv4(), title: 'Hello World', author: 'Nduhukire Catherine' },
+  ],
 };
 
-const addBook = (book) => ({
+export default function booksReducer(state = initialState, action) {
+  switch (action.type) {
+    case ADD_BOOK: {
+      const newBooks = [
+        ...state.books, action.payload,
+      ];
+      return { ...state.books, books: newBooks };
+    }
+    case REMOVE_BOOK:
+      return {
+        ...state,
+        books: state.books.filter((book) => book.id !== action.payload.id),
+      };
+    default:
+      return state;
+  }
+}
+
+export const addBook = (title, author) => ({
   type: ADD_BOOK,
-  book,
+  payload: {
+    title,
+    author,
+    id: uuidv4(),
+  },
 });
 
-const removingBook = (book) => ({
-  type: 'REMOVE_BOOK',
-  book,
+export const removeBook = (id) => ({
+  type: REMOVE_BOOK,
+  payload: {
+    id,
+  },
 });
-
-export { addBook, removingBook };
-export default bookCounterReducer;

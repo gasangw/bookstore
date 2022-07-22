@@ -1,13 +1,12 @@
-import { createStore } from 'react-redux';
-import checkingStatus, { statusAction } from './categories/categories';
-import bookCounterReducer, { addBook, removingBook } from './books/books';
+import { configureStore } from '@reduxjs/toolkit';
+import booksReducer from './books/books';
+import categoriesReducer from './categories/categories';
 
-const store = createStore({
-  status: checkingStatus,
-  count: bookCounterReducer,
+const store = configureStore({
+  reducer: {
+    books: booksReducer,
+    categories: categoriesReducer,
+  },
 });
 
 export default store;
-statusAction();
-addBook();
-removingBook();
