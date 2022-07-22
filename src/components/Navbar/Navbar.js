@@ -18,12 +18,12 @@ const Navbar = () => (
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon" />
         </button>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item list-item"><Link to="/">Books</Link></li>
-            <li className="nav-item list-item"><Link to="/categories">Categories</Link></li>
+        <div className="collapse" id="navbarSupportedContent">
+          <ul className="navbar1">
+            <li className="nav-book"><Link to="/">Books</Link></li>
+            <li className="nav-cat"><Link to="/categories">Categories</Link></li>
           </ul>
-          <div className="d-flex user-icon">
+          <div className="Uicon">
             <FontAwesomeIcon icon="fa-solid fa-user" />
           </div>
         </div>

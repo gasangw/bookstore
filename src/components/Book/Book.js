@@ -33,7 +33,7 @@ const Book = ({ title, author, id }) => {
       <div className="right-content">
         <h5>CURRENT CHAPTER</h5>
         <p>CHAPTER 17</p>
-        <button type="button" className="btn btn-primary">UPDATE PROGRESS</button>
+        <button type="button" className="status">UPDATE PROGRESS</button>
       </div>
     </div>
   );

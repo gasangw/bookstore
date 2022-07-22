@@ -54,7 +54,7 @@ const AddBook = () => {
           value={state.author}
           onChange={handleChange}
         />
-        <button type="button" className="btn btn-primary submit" onClick={handleSubmit}>
+        <button type="button" className="submit" onClick={handleSubmit}>
           ADD BOOK
         </button>
       </form>
