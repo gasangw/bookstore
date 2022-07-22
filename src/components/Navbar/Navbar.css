@@ -5,15 +5,61 @@
   padding: 20px;
 }
 
+.logo {
+  color: #0290ff;
+  font-weight: bold;
+  font-family: sans-serif;
+  font-size: 2rem;
+}
+
+a {
+  color: #121212;
+}
+
+.navbar {
+  font-family: 'Montserrat', sans-serif;
+}
+
 .list-container {
   display: flex;
   gap: 21px;
+}
+
+.navbar-nav {
+  gap: 22px;
 }
 
 li {
   list-style: none;
 }
 
-a {
+.collapse {
+  display: flex;
+}
+
+.navbar1 {
   text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  color: #121212 !important;
+  font-weight: 600;
+  gap: 20px;
+  display: flex;
+}
+
+.inner-container {
+  display: flex;
+}
+
+.Uicon {
+  color: #0290ff;
+  margin-left: 400%;
+  padding: 5px;
+  border-radius: 45%;
+  border: 1px solid rgb(211, 204, 204);
+  align-self: center;
+}
+
+.nav-cat {
+  color: rgb(192, 196, 199);
 }
