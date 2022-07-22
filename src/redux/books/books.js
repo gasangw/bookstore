@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 import axios from 'axios';
 
 const FETCH_BOOKS = 'bookstore/books/fetchBooks';
@@ -33,7 +34,6 @@ export const fetchBooks = () => async (dispatch) => {
 };
 
 export const addBook = ({
-  // eslint-disable-next-line camelcase
   title, author, item_id, category,
 }) => async (dispatch) => {
   try {
